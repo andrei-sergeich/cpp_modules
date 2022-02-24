@@ -54,30 +54,17 @@ void PhoneBook::Search()
 		while (true)
 		{
 			std::cout << "Enter the number of the record you want to display: ";
-			std::cin >> it;
-			if (std::cin.eof() || std::cin.bad())
+			std::string num;
+			if (!std::getline(std::cin, num))
 				exit(EXIT_FAILURE);
-			if (std::cin.fail())
-			{
-				std::cout << "ERROR: Enter a number" << std::endl;
-				std::cin.clear();
-				std::cin.ignore(32767,'\n');
-				continue;
-			}
-//			std::string num;
-//			std::cout << "num -" << num << std::endl;
-//			if (!std::getline(std::cin, num))
-//				exit(EXIT_FAILURE);
-//			it = atoi(num.c_str());
+			it = atoi(num.c_str());
+			std::cout << "it - " << it << std::endl;
 			if (it < 1 || it > m_number_of_records)
 			{
 				std::cout << "ERROR: Enter number from 1 to "
 							<< m_number_of_records << std::endl;
-				std::cin.clear();
-				std::cin.ignore(32767,'\n');
 				continue;
 			}
-			std::cin.ignore(32767, '\n');
 			break;
 		}
 	}
