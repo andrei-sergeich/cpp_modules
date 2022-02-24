@@ -20,20 +20,73 @@ void PhoneBook::Add()
 
 void PhoneBook::Search()
 {
+	int it;
+
 	if (m_number_of_records == 0)
 	{
 		std::cout << "Phonebook is empty, add a record, please." << std::endl;
 		return;
 	}
-	for (int it = 0; it < m_number_of_records; it++)
+	else
 	{
-		std::cout << m_contact[it].getFirstName() << std::endl;
-		std::cout << m_contact[it].getLastName() << std::endl;
-		std::cout << m_contact[it].getNickName() << std::endl;
-		std::cout << m_contact[it].getPhoneNumber() << std::endl;
-		std::cout << m_contact[it].getDarkestSecret() << std::endl;
-		std::cout << m_index << std::endl;
+		std::cout << "|  index   " << "|first name" << "| last name" << "| nickname |\n"
+					<< "|----------" << "|----------" << "|----------" << "|----------|\n";
+		for (it = 0; it < m_number_of_records; it++)
+		{
+			std::cout << "|" << std::setw(10) << it + 1 << "|";
+			if (m_contact[it].getFirstName().length() > 10)
+				std::cout.write( m_contact[it].getFirstName().c_str(), 9).put('.');
+			else
+				std::cout << std::setw(10) << m_contact[it].getFirstName();
+			std::cout << "|";
+			if (m_contact[it].getLastName().length() > 10)
+				std::cout.write( m_contact[it].getLastName().c_str(), 9).put('.');
+			else
+				std::cout << std::setw(10) << m_contact[it].getLastName();
+			std::cout << "|";
+			if (m_contact[it].getNickName().length() > 10)
+				std::cout.write( m_contact[it].getNickName().c_str(), 9).put('.');
+			else
+				std::cout << std::setw(10) << m_contact[it].getNickName();
+			std::cout << "|\n";
+		}
+		std::cout << "---------------------END---------------------" << std::endl;
+		while (true)
+		{
+			std::cout << "Enter the number of the record you want to display: ";
+			std::cin >> it;
+			if (std::cin.eof() || std::cin.bad())
+				exit(EXIT_FAILURE);
+			if (std::cin.fail())
+			{
+				std::cout << "ERROR: Enter a number" << std::endl;
+				std::cin.clear();
+				std::cin.ignore(32767,'\n');
+				continue;
+			}
+//			std::string num;
+//			std::cout << "num -" << num << std::endl;
+//			if (!std::getline(std::cin, num))
+//				exit(EXIT_FAILURE);
+//			it = atoi(num.c_str());
+			if (it < 1 || it > m_number_of_records)
+			{
+				std::cout << "ERROR: Enter number from 1 to "
+							<< m_number_of_records << std::endl;
+				std::cin.clear();
+				std::cin.ignore(32767,'\n');
+				continue;
+			}
+			std::cin.ignore(32767, '\n');
+			break;
+		}
 	}
+	it--;
+	std::cout << "The first name: " << m_contact[it].getFirstName() << "\n"
+			<< "The last name: " << m_contact[it].getLastName() << "\n"
+			<< "The nick name: " << m_contact[it].getNickName() << "\n"
+			<< "The phone number: " << m_contact[it].getPhoneNumber() << "\n"
+			<< "The darkest secret: " << m_contact[it].getDarkestSecret() << std::endl;
 }
 
 void PhoneBook::Open()
@@ -45,7 +98,6 @@ void PhoneBook::Open()
 		std::cout << "Enter a command (ADD, SEARCH or EXIT): ";
 		if (!std::getline(std::cin, command))
 			exit(EXIT_FAILURE);
-//		std::getline(std::cin, command);
 		if (command == "ADD")
 			Add();
 		else if (command == "SEARCH")

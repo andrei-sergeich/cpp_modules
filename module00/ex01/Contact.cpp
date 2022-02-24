@@ -11,7 +11,10 @@ std::string readData(const char *prompt)
 	while(input.empty())
 	{
 		std::cout << prompt;
-		std::getline(std::cin, input);
+		if (!std::getline(std::cin, input))
+			exit(EXIT_FAILURE);
+		else if (input.find_first_not_of(" \t\v\r\n") == input.npos)
+			input.clear();
 	}
 	return input;
 }
