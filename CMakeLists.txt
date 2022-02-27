@@ -15,4 +15,10 @@ set(00EX01
         module00/ex01/main.cpp
         )
 
-add_executable(cpp_modules ${00EX01})
+set(00EX02
+        module00/ex02/Account.hpp
+        module00/ex02/Account.cpp
+        module00/ex02/test.cpp
+        )
+
+add_executable(cpp_modules ${00EX02})
