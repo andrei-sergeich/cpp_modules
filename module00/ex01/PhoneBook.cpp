@@ -58,7 +58,6 @@ void PhoneBook::Search()
 			if (!std::getline(std::cin, num))
 				exit(EXIT_FAILURE);
 			it = atoi(num.c_str());
-			std::cout << "it - " << it << std::endl;
 			if (it < 1 || it > m_number_of_records)
 			{
 				std::cout << "ERROR: Enter number from 1 to "
