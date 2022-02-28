@@ -21,4 +21,12 @@ set(00EX02
         module00/ex02/test.cpp
         )
 
-add_executable(cpp_modules ${00EX02})
+set(01EX00
+        module01/ex00/Zombie.hpp
+        module01/ex00/Zombie.cpp
+        module01/ex00/newZombie.cpp
+        module01/ex00/randomChump.cpp
+        module01/ex00/main.cpp
+        )
+
+add_executable(cpp_modules ${01EX00})
