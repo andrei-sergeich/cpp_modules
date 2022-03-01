@@ -29,4 +29,11 @@ set(01EX00
         module01/ex00/main.cpp
         )
 
-add_executable(cpp_modules ${01EX00})
+set(01EX01
+        module01/ex01/Zombie.hpp
+        module01/ex01/Zombie.cpp
+        module01/ex01/ZombieHorde.cpp
+        module01/ex01/main.cpp
+        )
+
+add_executable(cpp_modules ${01EX01})
