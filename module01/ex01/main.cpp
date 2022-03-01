@@ -3,8 +3,13 @@
 
 int	main(void)
 {
-//	Zombie	bbb("cc");
-	Zombie*	zombicks = zombieHorde(COUNT, "Trupik");
+	std::string	name;
+
+	std::cout << "Enter name of zombie: ";
+	if (!std::getline(std::cin, name))
+		exit(EXIT_FAILURE);
+
+	Zombie*	zombicks = zombieHorde(COUNT, name);
 
 	for (int it = 0; it < COUNT; it++)
 		zombicks[it].announce();

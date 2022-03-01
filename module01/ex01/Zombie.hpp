@@ -7,6 +7,7 @@ class Zombie
 {
 private:
 	std::string	m_name;
+	static int	m_index;
 
 public:
 	Zombie();
@@ -14,6 +15,7 @@ public:
 	~Zombie();
 
 	void	announce(void);
+	void	setName(std::string name);
 };
 
 Zombie*	zombieHorde(int N, std::string name);
