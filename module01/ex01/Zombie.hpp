@@ -2,6 +2,8 @@
 #define ZOMBIE_HPP
 
 #include <iostream>
+#include <cstdlib>
+#include <sstream>
 
 class Zombie
 {

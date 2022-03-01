@@ -21,7 +21,10 @@ void	Zombie::announce()
 
 void Zombie::setName(std::string name)
 {
-	m_name = name + "-" + std::to_string(m_index);
+	std::stringstream	ss;
+
+	ss << m_index;
+	m_name = name + "-" + ss.str();
 	std::cout << m_name << " risen!" << std::endl;
 	m_index++;
 }
