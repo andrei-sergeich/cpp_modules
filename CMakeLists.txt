@@ -36,4 +36,8 @@ set(01EX01
         module01/ex01/main.cpp
         )
 
-add_executable(cpp_modules ${01EX01})
+set(01EX02
+        module01/ex02/main.cpp
+        )
+
+add_executable(cpp_modules ${01EX02})
