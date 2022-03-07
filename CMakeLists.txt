@@ -41,6 +41,8 @@ set(01EX02
         )
 
 set(01EX03
+        module01/ex03/Weapon.hpp
+        module01/ex03/Weapon.cpp
         module01/ex03/main.cpp
         )
 
