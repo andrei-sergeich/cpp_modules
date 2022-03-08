@@ -50,4 +50,8 @@ set(01EX03
         module01/ex03/main.cpp
         )
 
-add_executable(cpp_modules ${01EX03})
+set(01EX04
+        module01/ex04/main.cpp
+        )
+
+add_executable(cpp_modules ${01EX04})
