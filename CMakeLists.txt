@@ -60,4 +60,10 @@ set(01EX05
         module01/ex05/main.cpp
         )
 
-add_executable(cpp_modules ${01EX05})
+set(01EX06
+        module01/ex06/Karen.hpp
+        module01/ex06/Karen.cpp
+        module01/ex06/main.cpp
+        )
+
+add_executable(cpp_modules ${01EX06})
