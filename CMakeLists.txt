@@ -84,4 +84,13 @@ set(02EX02
         module02/ex02/main.cpp
         )
 
-add_executable(cpp_modules ${02EX02})
+set(02EX03
+        module02/ex03/Point.hpp
+        module02/ex03/Point.cpp
+        module02/ex03/Fixed.hpp
+        module02/ex03/Fixed.cpp
+        module02/ex03/bsp.cpp
+        module02/ex03/main.cpp
+        )
+
+add_executable(cpp_modules ${02EX03})
