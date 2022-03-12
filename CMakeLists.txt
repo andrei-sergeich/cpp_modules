@@ -72,4 +72,10 @@ set(02EX00
         module02/ex00/main.cpp
         )
 
-add_executable(cpp_modules ${02EX00})
+set(02EX01
+        module02/ex01/Fixed.hpp
+        module02/ex01/Fixed.cpp
+        module02/ex01/main.cpp
+        )
+
+add_executable(cpp_modules ${02EX01})
