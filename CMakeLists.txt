@@ -99,7 +99,7 @@ set(03EX00
         module03/ex00/main.cpp
         )
 
-set(03EX00
+set(03EX01
         module03/ex01/ScavTrap.hpp
         module03/ex01/ScavTrap.cpp
         module03/ex01/ClapTrap.hpp
@@ -107,4 +107,14 @@ set(03EX00
         module03/ex01/main.cpp
         )
 
-add_executable(cpp_modules ${03EX00})
+set(03EX02
+        module03/ex02/FragTrap.hpp
+        module03/ex02/FragTrap.cpp
+        module03/ex02/ScavTrap.hpp
+        module03/ex02/ScavTrap.cpp
+        module03/ex02/ClapTrap.hpp
+        module03/ex02/ClapTrap.cpp
+        module03/ex02/main.cpp
+        )
+
+add_executable(cpp_modules ${03EX02})
