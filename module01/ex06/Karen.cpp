@@ -4,7 +4,7 @@ Karen::Karen() {};
 
 Karen::~Karen() {};
 
-void	debug(void)
+void	Karen::debug(void)
 {
 	std::cout << "[DEBUG]: "
 			  << "I love having extra bacon for my "
@@ -12,7 +12,7 @@ void	debug(void)
 			  << "I really do!" << std::endl;
 }
 
-void	info(void)
+void	Karen::info(void)
 {
 	std::cout << "[INFO]: "
 			  << "I cannot believe adding extra bacon costs more money. "
@@ -20,7 +20,7 @@ void	info(void)
 			  << "If you did, I wouldn’t be asking for more!" << std::endl;
 }
 
-void	warning(void)
+void	Karen::warning(void)
 {
 	std::cout << "[WARNING]: "
 			  << "I think I deserve to have some extra bacon for free. "
@@ -28,7 +28,7 @@ void	warning(void)
 			  << "here since last month." << std::endl;
 }
 
-void	error(void)
+void	Karen::error(void)
 {
 	std::cout << "[ERROR]: "
 			  << "This is unacceptable! I want to speak to the manager now."
