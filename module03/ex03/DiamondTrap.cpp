@@ -1,6 +1,8 @@
 #include "DiamondTrap.hpp"
 
-DiamondTrap::DiamondTrap() : ClapTrap(100, 100, 30),
+DiamondTrap::DiamondTrap() : ClapTrap(100, 50, 30, "Defaulter_diamond_clap"),
+							 ScavTrap("Defaulter_scav"),
+							 FragTrap("Defaulter_frag"),
 							 m_name("Defaulter_diamond")
 {
 	std::cout << CYAN
@@ -14,8 +16,13 @@ DiamondTrap::~DiamondTrap()
 	std::cout << ORANGE << "[DiamondTrap] destructor: " << m_name << " terminated!" << RESET << std::endl;
 }
 
-DiamondTrap::DiamondTrap(std::string name): ClapTrap(100, 100, 30, name + "_clap_name"),
-											FragTrap(name), ScavTrap(name), m_name(name)
+DiamondTrap::DiamondTrap(std::string name) : ClapTrap(100,
+													  50,
+													  30,
+													  name + "_clap_name"),
+											 ScavTrap(name),
+											 FragTrap(name),
+											 m_name(name)
 {
 	std::cout << GREEN
 			  << "[DiamondTrap] constructor with a name: "
@@ -26,7 +33,10 @@ DiamondTrap::DiamondTrap(std::string name): ClapTrap(100, 100, 30, name + "_clap
 DiamondTrap::DiamondTrap(const DiamondTrap &other) : ClapTrap(other.m_hitPoints,
 													 other.m_energyPoints,
 													 other.m_attackDamage,
-													 other.m_name)
+													 other.m_name + "_clap_name"),
+													 ScavTrap(other.m_name),
+													 FragTrap(other.m_name),
+													 m_name(other.m_name)
 {
 	std::cout << WHITE
 			  << "[DiamondTrap] copy constructor called" << RESET << std::endl;
