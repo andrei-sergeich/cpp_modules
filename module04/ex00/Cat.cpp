@@ -12,7 +12,7 @@ Cat::~Cat()
 
 Cat::Cat(const Cat &other) : Animal(other.m_type)
 {
-	std::cout << "[Animal]: copy constructor called" << std::endl;
+	std::cout << "[Cat]: copy constructor called" << std::endl;
 }
 
 Cat&	Cat::operator = (const Cat &other)
