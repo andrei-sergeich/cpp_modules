@@ -159,4 +159,16 @@ set(04EX01
         module04/ex01/main.cpp
         )
 
-add_executable(cpp_modules ${04EX01})
+set(04EX02
+        module04/ex02/Brain.hpp
+        module04/ex02/Brain.cpp
+        module04/ex02/Cat.hpp
+        module04/ex02/Cat.cpp
+        module04/ex02/Dog.hpp
+        module04/ex02/Dog.cpp
+        module04/ex02/Animal.hpp
+        module04/ex02/Animal.cpp
+        module04/ex02/main.cpp
+        )
+
+add_executable(cpp_modules ${04EX02})
