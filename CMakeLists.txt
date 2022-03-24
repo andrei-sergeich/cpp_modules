@@ -171,4 +171,24 @@ set(04EX02
         module04/ex02/main.cpp
         )
 
-add_executable(cpp_modules ${04EX02})
+set(04EX03
+        module04/ex03/MateriaSource.hpp
+        module04/ex03/MateriaSource.cpp
+        module04/ex03/IMateriaSource.hpp
+        module04/ex03/Character.hpp
+        module04/ex03/Character.cpp
+        module04/ex03/ICharacter.hpp
+        module04/ex03/Cure.hpp
+        module04/ex03/Cure.cpp
+        module04/ex03/Ice.hpp
+        module04/ex03/Ice.cpp
+        module04/ex03/AMateria.hpp
+        module04/ex03/AMateria.cpp
+        module04/ex03/main.cpp
+        )
+
+set(05EX00
+        module05/ex00/main.cpp
+        )
+
+add_executable(cpp_modules ${04EX03})
