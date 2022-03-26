@@ -188,7 +188,10 @@ set(04EX03
         )
 
 set(05EX00
+        module05/ex00/Bureaucrat.hpp
+        module05/ex00/Bureaucrat.cpp
+        module05/ex00/colors.hpp
         module05/ex00/main.cpp
         )
 
-add_executable(cpp_modules ${04EX03})
+add_executable(cpp_modules ${05EX00})
