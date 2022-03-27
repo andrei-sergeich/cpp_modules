@@ -1,8 +1,10 @@
 #ifndef BUREAUCRAT_HPP
 #define BUREAUCRAT_HPP
 
-#include <iomanip>
+#include <iostream>
 #include <string>
+#include <exception>
+#include "colors.hpp"
 
 class Bureaucrat
 {
@@ -25,14 +27,26 @@ public:
 
 	class GradeTooHighException : public std::exception
 	{
+	private:
+		std::string	_errMsg;
+
 	public:
-		Bureaucrat::GradeTooHighException
+		GradeTooHighException (const std::string& errMsg);
+		~GradeTooHighException () throw ();
+
+		const char *what() const throw();
 	};
 
-	class Bureaucrat::GradeTooLowException : public std::exception
+	class GradeTooLowException : public std::exception
 	{
-	public:
+	private:
+		std::string	_errMsg;
 
+	public:
+		GradeTooLowException (const std::string& errMsg);
+		~GradeTooLowException () throw ();
+
+		const char *what() const throw();
 	};
 };
 
