@@ -203,4 +203,19 @@ set(05EX01
         module05/ex01/main.cpp
         )
 
-add_executable(cpp_modules ${05EX01})
+set(05EX02
+        module05/ex02/PresidentialPardonForm.hpp
+        module05/ex02/PresidentialPardonForm.cpp
+        module05/ex02/RobotomyRequestForm.hpp
+        module05/ex02/RobotomyRequestForm.cpp
+        module05/ex02/ShrubberyCreationForm.hpp
+        module05/ex02/ShrubberyCreationForm.cpp
+        module05/ex02/Form.hpp
+        module05/ex02/Form.cpp
+        module05/ex02/Bureaucrat.hpp
+        module05/ex02/Bureaucrat.cpp
+        module05/ex02/colors.hpp
+        module05/ex02/main.cpp
+        )
+
+add_executable(cpp_modules ${05EX02})
