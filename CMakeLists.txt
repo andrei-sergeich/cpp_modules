@@ -235,4 +235,10 @@ set(05EX03
         module05/ex03/main.cpp
         )
 
-add_executable(cpp_modules ${05EX03})
+set(06EX00
+        module06/ex00/Converter.hpp
+        module06/ex00/Converter.cpp
+        module06/ex00/main.cpp
+        )
+
+add_executable(cpp_modules ${06EX00})
