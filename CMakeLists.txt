@@ -241,4 +241,8 @@ set(06EX00
         module06/ex00/main.cpp
         )
 
-add_executable(cpp_modules ${06EX00})
+set(06EX01
+        module06/ex01/main.cpp
+        )
+
+add_executable(cpp_modules ${06EX01})
