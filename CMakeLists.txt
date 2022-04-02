@@ -253,4 +253,9 @@ set(06EX02
         module06/ex02/main.cpp
         )
 
-add_executable(cpp_modules ${06EX02})
+set(07EX00
+        module07/ex00/templates.hpp
+        module07/ex00/main.cpp
+        )
+
+add_executable(cpp_modules ${07EX00})
