@@ -263,4 +263,10 @@ set(07EX01
         module07/ex01/main.cpp
         )
 
-add_executable(cpp_modules ${07EX01})
+set(07EX02
+        module07/ex02/Array.hpp
+        module07/ex02/Array.tpp
+        module07/ex02/main.cpp
+        )
+
+add_executable(cpp_modules ${07EX02})
