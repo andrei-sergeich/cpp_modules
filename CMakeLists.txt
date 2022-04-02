@@ -258,4 +258,9 @@ set(07EX00
         module07/ex00/main.cpp
         )
 
-add_executable(cpp_modules ${07EX00})
+set(07EX01
+        module07/ex01/iter.hpp
+        module07/ex01/main.cpp
+        )
+
+add_executable(cpp_modules ${07EX01})
