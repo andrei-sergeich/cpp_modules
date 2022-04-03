@@ -1,6 +1,8 @@
 #ifndef ITER_HPP
 # define ITER_HPP
 
+# include <iostream>
+
 template <typename T>
 void	iter(T* array, int len, void (*fnc)(T&))
 {
@@ -11,7 +13,6 @@ void	iter(T* array, int len, void (*fnc)(T&))
 template <typename T>
 void	printer(T& value)
 {
-//	std::cout << "a[" << i << "] = " << a[i] << std::endl;
 	std::cout << "value = " << value << std::endl;
 }
 
