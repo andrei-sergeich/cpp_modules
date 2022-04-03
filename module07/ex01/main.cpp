@@ -2,6 +2,18 @@
 #include "iter.hpp"
 #define SIZE 5
 
+class Awesome {
+	int	i;
+public:
+	Awesome(void) : i(42) {return;}
+	int get(void) const {
+		return this->i;
+	};
+};
+
+std::ostream & operator<<(std::ostream &o, Awesome const &rhs) {
+	o << rhs.get(); return o;};
+
 int main( void )
 {
 	int		i[SIZE] = {2, 5, 9, 8, 1};
@@ -28,9 +40,13 @@ int main( void )
 	std::cout << "-----------------" << std::endl;
 	::iter(f, SIZE, ::printer);
 	std::cout << "*****************" << std::endl;
+	std::cout << std::endl;
 
 	std::string arrayStr[] = {"templates", "are", "cool"};
 	::iter(arrayStr, 3, ::printer);
+	std::cout << "-----------------" << std::endl;
+	Awesome arr[SIZE];
+	::iter(arr, SIZE, ::printer);
 
 	return 0;
 }
