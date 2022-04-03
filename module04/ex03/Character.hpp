@@ -19,7 +19,8 @@ public:
 	Character(const Character& other);
 	Character&	operator=(const Character& other);
 
-	virtual std::string const & getName() const;
+	virtual std::string const &	getName() const;
+	virtual AMateria*			getMateria(int idx);
 
 	virtual void equip(AMateria* m);
 	virtual void unequip(int idx);

@@ -51,6 +51,11 @@ std::string const& Character::getName() const
 	return m_name;
 }
 
+AMateria* Character::getMateria(int idx)
+{
+	return m_slot[idx];
+}
+
 void	Character::equip(AMateria* m)
 {
 	if (m == NULL)
@@ -64,7 +69,8 @@ void	Character::equip(AMateria* m)
 		{
 			if (!m_slot[i])
 			{
-				m_slot[i] = m;
+				m_slot[i] = m->clone();
+//				delete m;
 				return;
 			}
 		}
