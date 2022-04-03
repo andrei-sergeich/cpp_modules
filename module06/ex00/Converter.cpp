@@ -19,32 +19,45 @@ Converter& Converter::operator=(const Converter& other) {
 
 void	Converter::getChar(char* str)
 {
+	char	_toChar;
 	try
 	{
-		char	_toChar = static_cast<char>(std::stoi(str));
-//		char	_toChar = static_cast<char>(std::atoi(str));
+		if (strlen(str) == 1 && !isprint(str[0]))
+		{
+			std::cout << "here\n";
+			_toChar = *str;;
+		}
+		else if (str[0] == '.')
+			_toChar = static_cast<int>(std::atoi(str));
+		else
+			_toChar = static_cast<char>(std::stoi(str));
 		if (!isprint(_toChar))
 			std::cout << "char:\t" << YELLOW << "Non displayable" << RESET << std::endl;
 		else
 			std::cout << "char:\t" << GREEN << _toChar << RESET << std::endl;
 	}
-	catch (std::exception &exception)
+	catch (std::exception& exception)
 	{
-		std::cout << "char:\t" << RED "impossible" << RESET << std::endl;
+		std::cout << "char:\t" << RED << "impossible" << RESET << std::endl;
 	}
 }
 
 void	Converter::getInt(char* str)
 {
+	int	_toInt;
 	try
 	{
-		int	_toInt = static_cast<int>(std::stoi(str));
-//		int	_toInt = static_cast<int>(std::atoi(str));
+		if (strlen(str) == 1 && !isdigit(str[0]))
+			_toInt = static_cast<int>(str[0]);
+		else if (str[0] == '.')
+			_toInt = static_cast<int>(std::atoi(str));
+		else
+			_toInt = static_cast<int>(std::stoi(str));
 		std::cout << "int:\t" << GREEN << _toInt << RESET << std::endl;
 	}
-	catch (std::exception &exception)
+	catch (std::exception& exception)
 	{
-		std::cout << "int:\t" << RED "impossible" << RESET << std::endl;
+		std::cout << "int:\t" << RED << "impossible" << RESET << std::endl;
 	}
 }
 
@@ -53,12 +66,11 @@ void	Converter::getFloat(char* str)
 	try
 	{
 		float	_toFloat = static_cast<float>(std::stof(str));
-//		float	_toFloat = static_cast<float>(std::atof(str));
 		std::cout << "float:\t" << GREEN << _toFloat << "f" << RESET << std::endl;
 	}
 	catch (std::exception &exception)
 	{
-		std::cout << RED << "float: impossible" << RESET << std::endl;
+		std::cout << "float:\t" << RED << "impossible" << RESET << std::endl;
 	}
 }
 
@@ -67,12 +79,11 @@ void	Converter::getDouble(char* str)
 	try
 	{
 		double	_toDouble = static_cast<double>(std::stod(str));
-//		double	_toDouble = static_cast<double>(std::atod(str));
 		std::cout << "double:\t" << GREEN << _toDouble << RESET << std::endl;
 	}
 	catch (std::exception &exception)
 	{
-		std::cout << RED << "double: impossible" << RESET << std::endl;
+		std::cout << "double:\t" << RED << "impossible" << RESET << std::endl;
 	}
 }
 
@@ -86,4 +97,3 @@ void	Converter::converting(char* str)
 	getFloat(str);
 	getDouble(str);
 }
-

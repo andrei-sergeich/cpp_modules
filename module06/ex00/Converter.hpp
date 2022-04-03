@@ -12,11 +12,6 @@ class Converter
 {
 private:
 	char*	_value;
-//	char	_toChar;
-//	int		_toInt;
-//	float	_toFloat;
-//	double	_toDouble;
-
 	void	converting(char* str);
 
 public:
