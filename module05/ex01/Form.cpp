@@ -101,13 +101,13 @@ void			Form::beSigned(const Bureaucrat& bur)
 std::ostream&	operator<<(std::ostream &out, const Form& other)
 {
 	std::cout << std::boolalpha;
-	out  << setiosflags(std::ios::left) << std::setw(20) << "Form name:" << GREEN
+	out  << std::setiosflags(std::ios::left) << std::setw(20) << "Form name:" << GREEN
 		 << other.getName() << RESET << std::endl;
-	out  << setiosflags(std::ios::left) << std::setw(20) <<"Form is singed:"
+	out  << std::setiosflags(std::ios::left) << std::setw(20) <<"Form is singed:"
 		 << (other.getIsSigned() ? GREEN : RED) << other.getIsSigned() << RESET << std::endl;
-	out  << setiosflags(std::ios::left) << std::setw(20) << "Grade to sign:" << GREEN
+	out  << std::setiosflags(std::ios::left) << std::setw(20) << "Grade to sign:" << GREEN
 		 << other.getGradeToSign() << RESET << std::endl;
-	out  << setiosflags(std::ios::left) << std::setw(20) << "Grade to execute:" << GREEN
+	out  << std::setiosflags(std::ios::left) << std::setw(20) << "Grade to execute:" << GREEN
 		 << other.getGradeToExecute() << RESET;
 	return out;
 }
