@@ -19,5 +19,14 @@ int main( void )
 	std::cout << "min( c, d ) = " << ::min( c, d ) << std::endl;
 	std::cout << "max( c, d ) = " << ::max( c, d ) << std::endl;
 
+	std::cout << "--------------------------------------" << std::endl;
+
+	Awesome a1(2);
+	Awesome b1(3);
+	::swap(a1 , b1);
+	std::cout << "a1 = " << a1 << ", b1 = " << b1 << std::endl;
+	std::cout << "man( a1, b1 ) = " << ::max( a1, b1 ) << std::endl;
+	std::cout << "mix( a1, b1 ) = " << ::min( a1, b1 ) << std::endl;
+
 	return 0;
 }
