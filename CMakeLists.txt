@@ -271,8 +271,8 @@ set(07EX02
 
 set(08EX00
         module08/ex00/easyfind.hpp
-#        module08/ex00/easyfind.tpp
+        module08/ex00/easyfind.tpp
         module08/ex00/main.cpp
         )
 
-add_executable(cpp_modules ${07EX02})
+add_executable(cpp_modules ${08EX00})
