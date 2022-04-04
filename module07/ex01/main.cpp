@@ -2,17 +2,7 @@
 #include "iter.hpp"
 #define SIZE 5
 
-class Awesome {
-	int	i;
-public:
-	Awesome(void) : i(42) {return;}
-	int get(void) const {
-		return this->i;
-	};
-};
 
-std::ostream & operator<<(std::ostream &o, Awesome const &rhs) {
-	o << rhs.get(); return o;};
 
 int main( void )
 {
@@ -47,6 +37,7 @@ int main( void )
 	std::cout << "-----------------" << std::endl;
 	Awesome arr[SIZE];
 	::iter(arr, SIZE, ::printer);
+	::iter(arr, SIZE, ::print);
 
 	return 0;
 }
