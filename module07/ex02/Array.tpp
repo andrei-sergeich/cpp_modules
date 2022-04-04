@@ -54,8 +54,14 @@ unsigned int	Array<T>::size() const
 }
 
 template<typename T>
-std::ostream&	operator<<(std::ostream &out, const Array<T>& other)
+std::ostream&	operator<<(std::ostream &out, Array<T>& other)
 {
-	out << other.getName() << ", bureaucrat grade " << other.getGrade() << ".";
+	int size = other.size();
+	for (int i = 0; i < size; ++i)
+	{
+		out << other[i];
+		if (i < size - 1)
+			out << " ";
+	}
 	return out;
 }

@@ -14,6 +14,9 @@ int main(int, char**)
         mirror[i] = value;
     }
     //SCOPE
+//	std::cout << numbers << std::endl;
+//	Array<int> empty;
+//	std::cout << empty << std::endl;
     {
         Array<int> tmp = numbers;
         Array<int> test(tmp);
