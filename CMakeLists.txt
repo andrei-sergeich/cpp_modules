@@ -275,4 +275,10 @@ set(08EX00
         module08/ex00/main.cpp
         )
 
-add_executable(cpp_modules ${08EX00})
+set(08EX01
+        module08/ex01/Span.hpp
+        module08/ex01/Span.cpp
+        module08/ex01/main.cpp
+        )
+
+add_executable(cpp_modules ${08EX01})
