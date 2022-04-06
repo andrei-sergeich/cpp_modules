@@ -281,4 +281,10 @@ set(08EX01
         module08/ex01/main.cpp
         )
 
-add_executable(cpp_modules ${08EX01})
+set(08EX02
+        module08/ex02/MutantStack.hpp
+        module08/ex02/MutantStack.tpp
+        module08/ex02/main.cpp
+        )
+
+add_executable(cpp_modules ${08EX02})
