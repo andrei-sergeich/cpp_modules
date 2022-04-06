@@ -81,7 +81,7 @@ long	Span::shortestSpan()
 	catch (std::exception & ex)
 	{
 		std::cout << RED << ex.what() << RESET << std::endl;
-		return (-1); // for Linux
+		return (-1);
 	}
 }
 
@@ -103,7 +103,7 @@ long	Span::longestSpan()
 	catch (std::exception & ex)
 	{
 		std::cout << RED << ex.what() << RESET << std::endl;
-		return (-1); // for Linux
+		return (-1);
 	}
 }
 
